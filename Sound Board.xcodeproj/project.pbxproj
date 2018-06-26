@@ -13,6 +13,7 @@
 		45220F0020E2C02100E23118 /* Sound_Board.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45220EFE20E2C02100E23118 /* Sound_Board.xcdatamodeld */; };
 		45220F0220E2C02300E23118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45220F0120E2C02300E23118 /* Assets.xcassets */; };
 		45220F0520E2C02300E23118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45220F0320E2C02300E23118 /* LaunchScreen.storyboard */; };
+		45220F0D20E2C66800E23118 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45220F0C20E2C66800E23118 /* SoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		45220F0120E2C02300E23118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45220F0420E2C02300E23118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45220F0620E2C02300E23118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45220F0C20E2C66800E23118 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				45220EF720E2C02100E23118 /* AppDelegate.swift */,
 				45220EF920E2C02100E23118 /* ViewController.swift */,
+				45220F0C20E2C66800E23118 /* SoundViewController.swift */,
 				45220EFB20E2C02100E23118 /* Main.storyboard */,
 				45220F0120E2C02300E23118 /* Assets.xcassets */,
 				45220F0320E2C02300E23118 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45220F0D20E2C66800E23118 /* SoundViewController.swift in Sources */,
 				45220F0020E2C02100E23118 /* Sound_Board.xcdatamodeld in Sources */,
 				45220EFA20E2C02100E23118 /* ViewController.swift in Sources */,
 				45220EF820E2C02100E23118 /* AppDelegate.swift in Sources */,

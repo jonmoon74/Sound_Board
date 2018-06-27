@@ -11,7 +11,7 @@ import AVFoundation
 
 
 class SoundViewController: UIViewController {
-
+    
     @IBOutlet weak var recordButton: UIButton!
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -20,26 +20,39 @@ class SoundViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupRecorder()
     }
     
     func setupRecorder() {
         //create an audio session
-        let session = AVAudioSession.sharedInstance()
-        session.setCategory(AVAudioSessionCategoryPlayAndRecord)
-        session.overrideOutputAudioPort(.speaker)
-        session.setActive(true)
-        
-        
-        //create url for audio file
-        
-        // create settings for audioRecorder
-        
-        //create audioRecorder object
-        audioRecorder = AVAudioRecorder(url: <#T##URL#>, settings: <#T##[String : Any]#>)
+        do {
+            let session = AVAudioSession.sharedInstance()
+            try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try session.overrideOutputAudioPort(.speaker)
+            try session.setActive(true)
+            
+            
+            //create url for audio file
+            let basePath : String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+            let pathComponents = [basePath, "audio.m4a"]
+            let audioURL = NSURL.fileURL(withPathComponents: pathComponents)!
+            
+            // create settings for audioRecorder
+            var settings :[String:AnyObject] = [:]
+            settings[AVFormatIDKey] = Int(kAudioFormatMPEG4AAC) as AnyObject
+            settings[AVSampleRateKey] = 44100.0 as AnyObject
+            settings[AVNumberOfChannelsKey] = 2 as AnyObject
+            
+            
+            //create audioRecorder object
+            audioRecorder = try AVAudioRecorder(url: audioURL, settings: settings)
+            audioRecorder!.prepareToRecord()
+        } catch {
+         
+        }
     }
-
+    
     @IBAction func recordTapped(_ sender: Any) {
     }
     
@@ -49,5 +62,5 @@ class SoundViewController: UIViewController {
     @IBAction func addTapped(_ sender: Any) {
     }
     
-
+    
 }

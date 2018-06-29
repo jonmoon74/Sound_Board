@@ -61,14 +61,18 @@ class SoundViewController: UIViewController {
     
     @IBAction func recordTapped(_ sender: Any) {
         if audioRecorder!.isRecording {
+            
             //stop the recording
             audioRecorder?.stop()
+            
             //change button title to record
             recordButton.setTitle("Record", for: .normal)
             playButton.isEnabled = true
         } else {
+            
             //start recording
             audioRecorder?.record()
+            
             //change button title to stop
             recordButton.setTitle("Stop", for: .normal)
         }

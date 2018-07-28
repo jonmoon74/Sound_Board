@@ -50,17 +50,46 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{
-            let sound = sounds[indexPath.row]
+    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    //        if editingStyle == .delete{
+    //            let sound = sounds[indexPath.row]
+    //            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    //            context.delete(sound)
+    //            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    //            do {
+    //                try sounds = context.fetch(Sound.fetchRequest())
+    //                tableView.reloadData()
+    //            } catch {}
+    //        }
+    //    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            // delete item at indexPath
+            let sound = self.sounds[indexPath.row]
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             context.delete(sound)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             do {
-                try sounds = context.fetch(Sound.fetchRequest())
+                try self.sounds = context.fetch(Sound.fetchRequest())
                 tableView.reloadData()
             } catch {}
         }
-    }
+        
+        let share = UITableViewRowAction(style: .normal, title: "Share") { (action, indexPath) in
+            // share item at indexPath
+            let sound = self.sounds[indexPath.row]
+            let shareText = sound.name
+            
+            if let soundFile = sound.audio {
+                let vc = UIActivityViewController(activityItems: [shareText, soundFile], applicationActivities: [])
+                self.present(vc, animated: true)
+            }
+        }
+            share.backgroundColor = UIColor.blue
+            
+            return [delete, share]
+        }
+        
 }
 

@@ -14,6 +14,7 @@
 		45220F0220E2C02300E23118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45220F0120E2C02300E23118 /* Assets.xcassets */; };
 		45220F0520E2C02300E23118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45220F0320E2C02300E23118 /* LaunchScreen.storyboard */; };
 		45220F0D20E2C66800E23118 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45220F0C20E2C66800E23118 /* SoundViewController.swift */; };
+		454A3989210CECE8001786E8 /* 003-microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 454A3988210CECE8001786E8 /* 003-microphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		45220F0420E2C02300E23118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45220F0620E2C02300E23118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45220F0C20E2C66800E23118 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		454A3988210CECE8001786E8 /* 003-microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "003-microphone.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				45220F0320E2C02300E23118 /* LaunchScreen.storyboard */,
 				45220F0620E2C02300E23118 /* Info.plist */,
 				45220EFE20E2C02100E23118 /* Sound_Board.xcdatamodeld */,
+				454A3988210CECE8001786E8 /* 003-microphone.png */,
 			);
 			path = "Sound Board";
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45220F0520E2C02300E23118 /* LaunchScreen.storyboard in Resources */,
+				454A3989210CECE8001786E8 /* 003-microphone.png in Resources */,
 				45220F0220E2C02300E23118 /* Assets.xcassets in Resources */,
 				45220EFD20E2C02100E23118 /* Main.storyboard in Resources */,
 			);

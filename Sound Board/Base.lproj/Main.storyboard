@@ -45,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="788"/>
+            <point key="canvasLocation" x="655" y="788"/>
         </scene>
         <!--Sound View Controller-->
         <scene sceneID="h0c-wG-heY">

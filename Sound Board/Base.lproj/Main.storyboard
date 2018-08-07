@@ -84,6 +84,9 @@
                                     <action selector="addTapped:" destination="kRJ-Jd-NiY" eventType="touchUpInside" id="C5v-t4-81J"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="003-microphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-7m-ulD">
+                                <rect key="frame" x="88" y="370" width="200" height="195"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -92,6 +95,8 @@
                             <constraint firstItem="R0M-Hb-xkk" firstAttribute="centerX" secondItem="otu-5L-QcP" secondAttribute="centerX" id="9kR-eD-BbX"/>
                             <constraint firstItem="R0M-Hb-xkk" firstAttribute="centerX" secondItem="otu-5L-QcP" secondAttribute="centerX" id="JIW-wn-aIQ"/>
                             <constraint firstItem="yfi-0e-QGL" firstAttribute="top" secondItem="q04-O1-aPg" secondAttribute="top" constant="25" id="Lbo-yC-Y4X"/>
+                            <constraint firstItem="vWQ-7m-ulD" firstAttribute="centerX" secondItem="otu-5L-QcP" secondAttribute="centerX" id="Sxn-Kv-cUJ"/>
+                            <constraint firstItem="vWQ-7m-ulD" firstAttribute="centerX" secondItem="otu-5L-QcP" secondAttribute="centerX" id="UW4-mT-hCB"/>
                             <constraint firstItem="yfi-0e-QGL" firstAttribute="centerX" secondItem="otu-5L-QcP" secondAttribute="centerX" id="aWq-7B-EWK"/>
                             <constraint firstItem="WGM-4j-Y8w" firstAttribute="top" secondItem="yfi-0e-QGL" secondAttribute="bottom" constant="25" id="gzw-kr-s6u"/>
                             <constraint firstItem="R0M-Hb-xkk" firstAttribute="top" secondItem="WGM-4j-Y8w" secondAttribute="bottom" constant="25" id="jJa-G0-4M5"/>
@@ -109,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLe-UO-XKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1323" y="789"/>
+            <point key="canvasLocation" x="1322.4000000000001" y="788.45577211394311"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XGd-7w-4f2">
@@ -130,4 +135,7 @@
             <point key="canvasLocation" x="-82.400000000000006" y="787.55622188905556"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="003-microphone.png" width="128" height="128"/>
+    </resources>
 </document>

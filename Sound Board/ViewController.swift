@@ -68,9 +68,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let sound = self.sounds[indexPath.row]
             let shareText = sound.name
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            
-            if let soundFile = sound.managedObjectContext {
-                let vc = UIActivityViewController(activityItems: [shareText as Any, soundFile], applicationActivities: [])
+            if let soundFileToShare = try? context.fetch(Sound.fetchRequest()) {
+                
+                //if let soundFile = sound.managedObjectContext {
+                let vc = UIActivityViewController(activityItems: [shareText as Any, soundFileToShare], applicationActivities: [])
                 self.present(vc, animated: true)
             }
         }
